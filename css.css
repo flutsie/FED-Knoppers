@@ -1,8 +1,334 @@
-H1{
-    text-align: center;
-    color: brown;
+/* algemene dingen over de hele website */
+* {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 1000;
+  margin: 0;
+  padding: 0;
+  color: rgb(253, 254, 255);
 }
-body>H2{
-    text-align: center;
-    color: lightblue;
+ul {
+  list-style: none;
+}
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* insp van Uiverse.io by satyamchaudharydev */
+a,
+button {
+  --bg: #3177da;
+  --hover-bg: #e33f2d;
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+a:focus,
+button:focus {
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0em 0em var(--bg);
+}
+a:active,
+button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+/* algemene dingen over de hele website */
+
+/* eerste img win skishit */
+div img:nth-last-of-type(1) {
+  width: 100%;
+  object-fit: cover;
+  display: grid;
+  grid-area: 1 / 1 / 11 / 11;
+}
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+  z-index: 3;
+  background: transparent;
+}
+
+header img {
+  width: 40%;
+  max-width: 420px;
+  transform-origin: top center;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+main > div {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+main div a {
+  box-shadow: rgb(46, 45, 46) 8px 8px 2px;
+  display: grid;
+  grid-area: 9 / 4 / 10 / 8;
+  height: 40%;
+  text-align: center;
+}
+
+nav:nth-child(1) img {
+  width: 40%;
+  object-fit: cover;
+}
+
+.logoShrink {
+  transform: scale(0.55);
+}
+main section h2 {
+  font-weight: 900;
+  font-size: 2.8em;
+  text-align: center;
+  color: rgb(93, 170, 195);
+}
+
+.jsFade {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+@keyframes tekstFadeIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.TekstFadeIn {
+  animation: 1.5s tekstFadeIn ease forwards;
+}
+
+section:nth-child(3) {
+  width: 100%;
+  object-fit: cover;
+  pointer-events: auto;
+}
+
+section ul {
+  display: flex;
+  overflow: auto;
+  gap: 1em;
+}
+
+/* -n+2 betekent alle nummers onder de 2
+weet niet meer welke website dit van is */
+
+ul li:nth-of-type(-n + 3) img {
+  width: 50%;
+  object-fit: cover;
+  transform: rotate(10deg); /* tilt beetje naar rechts */
+  transition: transform 0.3s ease;
+}
+ul li:nth-of-type(-n + 3) img:active {
+  transform: scale(1.4);
+}
+
+ul li:nth-of-type(-n + 3) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2em;
+  border-radius: 6%;
+  margin: 2em;
+  width: 100%;
+  overflow: a;
+}
+section ul li span {
+  display: block;
+}
+
+section ul {
+  display: flex;
+  overflow: auto;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-marker-group: after;
+  scrollbar-width: none;
+}
+
+section ul::scroll-marker-group {
+  height: 3em;
+  margin: 1em 3.5em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  row-gap: 0.25em;
+  column-gap: 0.5em;
+}
+
+section ul li {
+  flex-shrink: 0;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: center;
+  max-width: 20em;
+}
+/* tekst op de cards */
+section ul li span {
+  margin-top: 1em;
+}
+
+section ul li h3 {
+  margin-top: 0.5em;
+  scale: 2;
+  margin-bottom: 1em;
+}
+
+/* Tweede section met de video */
+section:nth-of-type(2) {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+section:nth-of-type(2) video {
+  width: 100%;
+  height: 85vh;
+  object-fit: cover;
+  display: block;
+}
+
+section:nth-of-type(2) h2 {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+  color: #efefef;
+  transform: translate(0); /* keep animation base intact */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+section ul li::scroll-marker {
+  content: "" / "naar" attr(data-label);
+
+  width: 1em;
+  aspect-ratio: 1;
+  background-color: canvas;
+  border-radius: 50%;
+  background: #efefef;
+  transition: 0.25s;
+}
+
+section ul li::scroll-marker:target-current {
+  background: #f09;
+}
+
+/* eerst card op pagina */
+section:nth-of-type(1) ul li:nth-of-type(1) {
+  background: #4d7cbf;
+  background: radial-gradient(
+    circle,
+    rgba(77, 124, 191, 1) 0%,
+    rgba(176, 208, 255, 1) 0%,
+    rgba(77, 124, 191, 1) 99%
+  );
+}
+/* tweede card op pagina */
+section:nth-of-type(1) ul li:nth-of-type(2) {
+  background: #4d7cbf;
+  background: radial-gradient(
+    circle,
+    rgba(77, 124, 191, 1) 0%,
+    rgba(176, 208, 255, 1) 0%,
+    rgba(77, 124, 191, 1) 99%
+  );
+}
+/* ul li:is(:nth-of-type(2), :nth-of-type(3)) is een manier om de dingen tussen 2 het eerste en 3 te selecteren zonder 1 */
+section:nth-of-type(1) ul li:nth-of-type(2) img,
+section:nth-of-type(3) ul li:is(:nth-of-type(2), :nth-of-type(3)) img {
+  scale: 1.2;
+  margin-top: 2em;
+}
+/* eerste van de 2de sectie */
+section:nth-of-type(3) ul li:nth-of-type(1) {
+  background: #4d7cbf;
+  background: radial-gradient(
+    circle,
+    rgba(77, 124, 191, 1) 0%,
+    rgba(176, 208, 255, 1) 0%,
+    rgba(77, 124, 191, 1) 99%
+  );
+}
+/* tweede van de 2de sectie */
+section:nth-of-type(3) ul li:nth-of-type(2) {
+  background: #f07e00;
+  background: radial-gradient(
+    circle,
+    rgba(240, 126, 0, 1) 0%,
+    rgba(255, 209, 156, 1) 0%,
+    rgba(240, 126, 0, 1) 99%
+  );
+}
+/* derde van de 2de sectie */
+section:nth-of-type(3) ul li:nth-of-type(3) {
+background: #E20B1B;
+background: radial-gradient(circle, rgba(226, 11, 27, 1) 0%, rgba(245, 140, 152, 1) 0%, rgba(226, 11, 27, 1) 100%);
+/* einde carousel styling */
+
+/* terug naar boven knop */
+footer button {
+  text-align: center;
+}
+
+/* alle regels beginnen verstopt en naar beneden geschoven */
+.wafel > section:nth-child(2) p {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.wafel > section§ {
+  background-color: rgb(93, 170, 195);
+}
+/* kleurtjes per regel */
+.wafel > section:nth-child(2) > p:nth-child(1) {
+  color: #ffdca0;
+}
+.wafel > section:nth-child(2) > p:nth-child(2) {
+  color: #b46b2d;
+}
+.wafel > section:nth-child(2) > p:nth-child(3) {
+  color: #ff9b3a;
+}
+.wafel > section:nth-child(2) > p:nth-child(4) {
+  color: #ffffff;
+}
+.wafel > section:nth-child(2) > p:nth-child(5) {
+  color: #5b3212;
 }
