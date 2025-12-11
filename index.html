@@ -1,39 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="nl">
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Knoppers</title>
-    <link rel="stylesheet" href="css.css">
-    <script src="java.js"></script>
-</head>
-<body>
-    <H1>
-        Knoppers
-    </H1>
-    <h2>
-        Dubbel genieten
-    </h2>
-    <article> 
-        <img src="plaatje.jpg" alt="Knoppers wafel afbeelding">
-        <h3>
-            Knoppers
-        </h3>
-        <h2>
-            Wafel
-        </h2>    
-        <a href="/link">ontdek</a>
-    </article>
-    <article> 
-        <img src="plaatje.jpg" alt="Knoppers Bar afbeelding">
-        <h3>
-            Knoppers
-        </h3>
-        <h2>
-            Bar
-        </h2>    
-        <a href="/link">ontdek</a>
-    </article>
-    
-</body>
+    <link rel="stylesheet" href="css.css" />
+    <script src="java.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1 class="visually-hidden">Knoppers</h1>
+        <img src="images/knoppers logo.svg" alt="het knoppers logo" />
+      </header>
+      <div>
+        <img
+          src="images/win_een_skivakantie.png"
+          alt="win een skivakantie oosterrijk afbeelding"
+        />
+        <a href="/link">Doe mee</a>
+      </div>
+
+      <section>
+        <h2 class="jsFade">Dubbel genieten</h2>
+        <ul>
+          <li>
+            <img
+              src="images/Wafel_afbeelding_basic.png"
+              alt="Knoppers wafel afbeelding"
+            />
+            <span>Knoppers</span>
+            <h3>Wafel</h3>
+            <a href="http://127.0.0.1:5500/wafel.html">ontdek</a>
+          </li>
+          <li>
+            <img src="images/knoppers_bar.webp" alt="Knoppers Bar afbeelding" />
+            <span>Knoppers</span>
+            <h3>Bar</h3>
+            <a href="/link">ontdek</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="jsFade">De knoppers wafel</h2>
+        <video
+          src="images/Knoppers startvideo.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
+      </section>
+      <section>
+        <ul>
+          <li>
+            <img
+              src="images/Wafel_afbeelding_basic.png"
+              alt="Knoppers wafel afbeelding"
+            />
+            <span>Knoppers</span>
+            <h3>Wafel</h3>
+            <a href="/link">ontdek</a>
+          </li>
+          <li>
+            <img src="images/knoppers_bar.webp" alt="Knoppers Bar afbeelding" />
+            <span>Knoppers</span>
+            <h3>Bar</h3>
+            <a href="/link">ontdek</a>
+          </li>
+          <li>
+            <img src="images/knoppers_bar.webp" alt="Knoppers Bar afbeelding" />
+            <span>Knoppers</span>
+            <h3>Bar</h3>
+            <a href="/link">ontdek</a>
+          </li>
+        </ul>
+      </section>
+      <!--  h2 class=visualy hidden deze section gaat over huppelepup -->
+    </main>
+    <footer>
+      <button>terug naar boven</button>
+    </footer>
+  </body>
 </html>
